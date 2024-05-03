@@ -1,0 +1,40 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Lato', Helvetica, Verdana, sans-serif;
+  font-style: normal;
+  font-size: 1.6rem;
+  @include font-w-main;
+  background-color: $color-bg;
+  color: $color-white;
+  @include respond-to(desktop) {
+    font-size: 20px; // Увеличение размера шрифта для десктопов
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-w-bold;
+}
+
+p {
+  line-height: 1.5;
+}
