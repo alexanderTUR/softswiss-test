@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.btn {
+  display: inline-flex;
+  padding: 0.7rem 1.2rem;
+  min-width: 16rem;
+  border-radius: 10rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+  font-family: $font-main;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+
+  @include respond-to(tablet) {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    padding: 1.4rem;
+    min-width: 19rem;
+  }
+
+  &--primary {
+    background: $color-secondary;
+    color: $color-black;
+    &:hover,
+    &:active {
+      background: rgba($color-secondary, 0.6);
+    }
+  }
+
+  &--secondary {
+    border: 0.2rem solid $color-secondary;
+    color: $color-secondary;
+    background-color: transparent;
+    &:hover,
+    &:active {
+      border-color: rgba($color-secondary, 0.6);
+      color: rgba($color-secondary, 0.6);
+    }
+  }
+}

@@ -14,16 +14,14 @@ html {
 
 body {
   min-height: 100vh;
+  height: 100vh;
   margin: 0;
-  font-family: 'Lato', Helvetica, Verdana, sans-serif;
+  font-family: $font-main;
   font-style: normal;
   font-size: 1.6rem;
   @include font-w-main;
   background-color: $color-bg;
   color: $color-white;
-  @include respond-to(desktop) {
-    font-size: 20px; // Увеличение размера шрифта для десктопов
-  }
 }
 
 h1,
@@ -37,4 +35,14 @@ h6 {
 
 p {
   line-height: 1.5;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }

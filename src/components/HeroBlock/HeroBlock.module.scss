@@ -1,0 +1,120 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+$bg-image-1x: '../../assets/bg-space-hero.webp';
+$bg-image-2x: '../../assets/bg-space-hero@2x.webp';
+
+.hero-block {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(15, 20, 32, 0.79) 100%),
+    image-set('#{$bg-image-1x}' 1x, '#{$bg-image-2x}' 2x);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  &__container {
+    padding: 4.4rem 1.5rem;
+
+    @include respond-to(tablet) {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      padding: 2.6rem 3rem;
+      min-height: 42rem;
+    }
+
+    @include respond-to(desktop) {
+      padding: 6rem 3rem;
+      min-height: 49rem;
+      max-width: 114.8rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__image-container {
+    width: 100%;
+    max-width: 30rem;
+    margin: -15rem auto 0;
+
+    @include respond-to(tablet) {
+      margin-top: 0;
+      margin-right: -12rem;
+    }
+
+    @include respond-to(desktop) {
+      margin-right: 0;
+      max-width: 33rem;
+    }
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    text-align: center;
+
+    @include respond-to(tablet) {
+      max-width: 42rem;
+      text-align: left;
+    }
+
+    @include respond-to(desktop) {
+      max-width: 70rem;
+    }
+  }
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 1.7rem;
+    font-size: 3.6rem;
+    line-height: 1;
+
+    @include respond-to(tablet) {
+      font-size: 4.8rem;
+      margin-bottom: 2.2rem;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 7.2rem;
+    }
+
+    &--accent {
+      color: $color-primary;
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 1.7rem;
+    font-weight: 800;
+    line-height: 1.2;
+
+    @include respond-to(tablet) {
+      font-size: 2.2rem;
+      margin-bottom: 2.2rem;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 3.2rem;
+    }
+
+    &--accent {
+      color: $color-secondary;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respond-to(tablet) {
+      max-width: 42rem;
+      text-align: left;
+      justify-content: left;
+    }
+  }
+}

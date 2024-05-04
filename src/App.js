@@ -1,8 +1,10 @@
+import { AppLayout } from './pages/AppLayout/AppLayout';
+import { Homepage } from './pages/Homepage/Homepage';
+
 export const App = () => {
   return (
-    <>
-      <h1>Hello World</h1>
-      <p>lorem ipsum </p>
-    </>
+    <AppLayout>
+      <Homepage />
+    </AppLayout>
   );
 };

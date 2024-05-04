@@ -4,8 +4,10 @@ $color-primary: #ff70d9;
 $color-secondary: #ebff00;
 $color-bg: #304571;
 
+$font-main: 'Lato', Helvetica, Verdana, sans-serif;
+
 $breakpoints: (
   phone: 360px,
   tablet: 768px,
-  desktop: 1248px,
+  desktop: 1024px,
 );
