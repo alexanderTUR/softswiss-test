@@ -1,0 +1,66 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.textExpander {
+  &Checkbox {
+    display: none;
+
+    &:checked ~ .textExpanderLabel {
+      &::after {
+        content: 'Read less';
+      }
+    }
+
+    &:checked ~ .textExpanderText {
+      overflow: visible;
+      display: block;
+      position: static;
+      -webkit-line-clamp: initial;
+    }
+  }
+
+  &Label {
+    display: inline-block;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: $color-secondary;
+    @include transition(color);
+    &:hover,
+    &:active {
+      color: rgba($color-secondary, 0.6);
+    }
+    &::after {
+      content: 'Read more';
+    }
+
+    @include respond-to(tablet) {
+      font-size: 1.6rem;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 2rem;
+    }
+  }
+
+  &Text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: rgba($color-white, 0.6);
+    margin: 0 0 2rem;
+
+    @include respond-to(tablet) {
+      font-size: 1.6rem;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 2rem;
+      margin-bottom: 1.6rem;
+    }
+  }
+}

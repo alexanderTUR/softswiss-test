@@ -12,9 +12,10 @@
   font-weight: 700;
   font-size: 1.6rem;
   font-family: $font-main;
-  transition: all 0.2s ease;
   border: none;
   cursor: pointer;
+  appearance: none;
+  @include transition();
 
   @include respond-to(tablet) {
     font-size: 2.2rem;

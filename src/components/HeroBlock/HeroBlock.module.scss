@@ -11,6 +11,7 @@ $bg-image-2x: '../../assets/bg-space-hero@2x.webp';
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  @include responsive-margins();
 
   &__container {
     padding: 4.4rem 1.5rem;

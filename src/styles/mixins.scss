@@ -8,6 +8,40 @@
   font-weight: 900;
 }
 
+@mixin transition($property: all, $duration: 0.2s, $easing: ease) {
+  transition: $property $duration $easing;
+}
+
+@mixin responsive-margins(
+  $mobile-top: 5rem,
+  $mobile-bottom: 5rem,
+  $tablet-top: 5.5rem,
+  $tablet-bottom: 5.5rem,
+  $desktop-top: 6rem,
+  $desktop-bottom: 6rem
+) {
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  margin-top: $mobile-top;
+  margin-bottom: $mobile-bottom;
+
+  @include respond-to(tablet) {
+    margin-top: $tablet-top;
+    margin-bottom: $tablet-bottom;
+  }
+
+  @include respond-to(desktop) {
+    margin-top: $desktop-top;
+    margin-bottom: $desktop-bottom;
+  }
+}
+
 @mixin respond-to($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     $breakpoint-value: map-get($breakpoints, $breakpoint);

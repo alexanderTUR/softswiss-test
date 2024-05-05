@@ -1,0 +1,44 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.text-expander {
+  &__text {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: rgba($color-white, 0.6);
+    margin: 0 0 2rem;
+
+    @include respond-to(tablet) {
+      font-size: 1.6rem;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 2rem;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__button {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: $color-secondary;
+    appearance: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    @include transition(color);
+    &:hover,
+    &:active {
+      color: rgba($color-secondary, 0.6);
+    }
+
+    @include respond-to(tablet) {
+      font-size: 1.6rem;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 2rem;
+    }
+  }
+}
