@@ -13,9 +13,8 @@
       padding-right: 3rem;
     }
 
-    @include respond-to(tablet) {
-      max-width: 114.8rem;
-      margin: 0 auto;
+    @include respond-to(desktop) {
+      @include content-limiter;
     }
   }
 

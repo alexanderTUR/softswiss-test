@@ -1,0 +1,70 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.offer-card {
+  height: 100%;
+  min-height: 32rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  display: flex;
+  align-items: flex-end;
+  padding: 3.2rem 2.8rem;
+  @include transition(transform, 0.3s);
+  will-change: transform;
+
+  @include respond-to(tablet) {
+    min-height: 35rem;
+  }
+
+  @include respond-to(desktop) {
+    padding: 3.5rem;
+  }
+
+  &--wide {
+    .offer-card__heading {
+      @include respond-to(desktop) {
+        font-size: 7.2rem;
+        max-width: 61rem;
+      }
+    }
+    .offer-card__text {
+      @include respond-to(desktop) {
+        font-size: 2.6rem;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  &--hover {
+    transform: scale(1.03) translateY(-0.5rem);
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__heading {
+    font-size: 4rem;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 2.2rem;
+    max-width: 24.5rem;
+    @include respond-to(desktop) {
+      max-width: 28rem;
+      font-size: 4.6rem;
+    }
+  }
+
+  &__text {
+    @include font-w-bold;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 2.2rem;
+    @include respond-to(desktop) {
+      font-size: 2.4rem;
+      line-height: 1.2;
+    }
+  }
+}

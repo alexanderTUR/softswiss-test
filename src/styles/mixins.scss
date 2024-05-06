@@ -12,6 +12,17 @@
   transition: $property $duration $easing;
 }
 
+@mixin responsive-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@mixin content-limiter {
+  max-width: 114.8rem;
+  margin: 0 auto;
+}
+
 @mixin responsive-margins(
   $mobile-top: 5rem,
   $mobile-bottom: 5rem,

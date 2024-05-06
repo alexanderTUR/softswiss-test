@@ -7,6 +7,7 @@ export const Button = ({
   buttonType = 'button',
   href = '#',
   children,
+  ...props
 }) => {
   const Tag = as === 'link' ? 'a' : 'button';
   const btnClass = `${classes.btn} ${classes[`btn--${type}`]}`;
@@ -14,7 +15,7 @@ export const Button = ({
   const additionalProps = Tag === 'a' ? { href } : { type: buttonType };
 
   return (
-    <Tag className={btnClass} {...additionalProps}>
+    <Tag className={btnClass} {...additionalProps} {...props}>
       {children}
     </Tag>
   );

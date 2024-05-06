@@ -27,8 +27,7 @@ $bg-image-2x: '../../assets/bg-space-hero@2x.webp';
     @include respond-to(desktop) {
       padding: 6rem 3rem;
       min-height: 49rem;
-      max-width: 114.8rem;
-      margin: 0 auto;
+      @include content-limiter;
     }
   }
 
@@ -49,9 +48,7 @@ $bg-image-2x: '../../assets/bg-space-hero@2x.webp';
   }
 
   &__image {
-    display: block;
-    max-width: 100%;
-    height: auto;
+    @include responsive-image;
   }
 
   &__content {

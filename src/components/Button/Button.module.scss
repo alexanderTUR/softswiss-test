@@ -17,19 +17,18 @@
   appearance: none;
   @include transition();
 
-  @include respond-to(tablet) {
-    font-size: 2.2rem;
-    line-height: 1.2;
-    padding: 1.4rem;
-    min-width: 19rem;
-  }
-
   &--primary {
     background: $color-secondary;
     color: $color-black;
     &:hover,
     &:active {
       background: rgba($color-secondary, 0.6);
+    }
+    @include respond-to(tablet) {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      padding: 1.4rem;
+      min-width: 19rem;
     }
   }
 
@@ -41,6 +40,12 @@
     &:active {
       border-color: rgba($color-secondary, 0.6);
       color: rgba($color-secondary, 0.6);
+    }
+    @include respond-to(desktop) {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      padding: 1.2rem;
+      min-width: 19rem;
     }
   }
 }

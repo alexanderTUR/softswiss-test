@@ -1,12 +1,14 @@
-import { OfferItem } from '../OfferItem/OfferItem';
+import classes from './OffersList.module.scss';
+import { OfferCard } from '../OfferCard/OfferCard';
 
-export const OffersList = () => {
+export const OffersList = ({ offers }) => {
   return (
-    <>
-      <h2>Offers list</h2>
-      <ul>
-        <OfferItem />
-      </ul>
-    </>
+    <ul className={classes['offers-list']}>
+      {offers.map((offer, index) => (
+        <li key={offer.id} className={classes['offers-list__item']}>
+          <OfferCard {...offer} isWide={index % 3 === 0} />
+        </li>
+      ))}
+    </ul>
   );
 };

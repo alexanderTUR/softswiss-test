@@ -1,0 +1,42 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.app-footer {
+  background-color: $color-black;
+  text-align: center;
+  margin-top: 5rem;
+
+  @include respond-to(desktop) {
+    margin-top: 6rem;
+  }
+
+  &__container {
+    padding: 2rem;
+
+    @include respond-to(tablet) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    @include respond-to(desktop) {
+      @include content-limiter;
+    }
+  }
+
+  &__icon-container {
+    width: 8rem;
+    margin: 0 auto;
+  }
+
+  &__icon {
+    @include responsive-image;
+    margin-top: -2rem; //corrects the icon's position according to the design
+  }
+
+  &__heading {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.55;
+    color: $color-secondary;
+  }
+}
