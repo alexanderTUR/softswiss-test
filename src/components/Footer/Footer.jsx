@@ -11,11 +11,11 @@ export const Footer = () => {
             className={classes['app-footer__icon']}
             src={rocketIcon}
             srcSet={`${rocketIcon} 1x, ${rocketIcon2x} 2x`}
-            alt='Stylized Earth with a rocket circling around it.'
+            alt='Rocket.'
             loading='lazy'
           />
         </div>
-        <h2 className={classes['app-footer__heading']}>Exciting space adventure!</h2>
+        <p className={classes['app-footer__heading']}>Exciting space adventure!</p>
       </div>
     </footer>
   );

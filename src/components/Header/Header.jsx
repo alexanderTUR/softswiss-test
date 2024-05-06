@@ -1,42 +1,38 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
+import { Burger } from '../Burger/Burger';
 import classes from './Header.module.scss';
 import Logo from '../../assets/logo.svg';
 import CartIcon from '../../assets/cart-icon.svg';
 import CartIconHover from '../../assets/cart-icon--hover.svg';
-import { Burger } from '../Burger/Burger';
 
 export const Header = () => {
   const [isMenuShown, setIsMenuShown] = useState(false);
   const navRef = useRef(null);
 
-  const toggleMenu = () => {
-    setIsMenuShown(!isMenuShown);
-  };
+  const toggleMenu = useCallback(() => {
+    setIsMenuShown((prev) => !prev);
+  }, []);
+
+  const handleOutsideClick = useCallback((event) => {
+    if (navRef.current && !navRef.current.contains(event.target)) {
+      setIsMenuShown(false);
+    }
+  }, []);
+
+  const handleResize = useCallback(() => {
+    const links = navRef.current.querySelectorAll('a');
+    if (window.matchMedia('(min-width: 1024px)').matches) {
+      links.forEach((link) => {
+        link.tabIndex = 0;
+      });
+    } else {
+      links.forEach((link) => {
+        link.tabIndex = isMenuShown ? 0 : -1;
+      });
+    }
+  }, [isMenuShown]);
 
   useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (
-        isMenuShown &&
-        !event.target.closest(`.${classes['app-header__nav']}`) &&
-        !event.target.closest(`.${classes['app-header__burger']}`)
-      ) {
-        setIsMenuShown(false);
-      }
-    };
-
-    const handleResize = () => {
-      const links = navRef.current.querySelectorAll('a');
-      if (window.matchMedia('(min-width: 1024px)').matches) {
-        links.forEach((link) => {
-          link.tabIndex = 0;
-        });
-      } else {
-        links.forEach((link) => {
-          link.tabIndex = isMenuShown ? 0 : -1;
-        });
-      }
-    };
-
     document.addEventListener('mousedown', handleOutsideClick);
     window.addEventListener('resize', handleResize);
     handleResize();
@@ -45,7 +41,7 @@ export const Header = () => {
       document.removeEventListener('mousedown', handleOutsideClick);
       window.removeEventListener('resize', handleResize);
     };
-  }, [isMenuShown]);
+  }, [handleOutsideClick, handleResize]);
 
   return (
     <header className={classes['app-header']}>

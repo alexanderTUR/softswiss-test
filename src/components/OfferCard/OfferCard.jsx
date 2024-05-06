@@ -11,7 +11,8 @@ export const OfferCard = (props) => {
   const cardClasses = `${classes['offer-card']} ${isWide ? classes['offer-card--wide'] : ''} ${hover ? classes['offer-card--hover'] : ''}`;
 
   return (
-    <div className={cardClasses} style={{ backgroundImage }}>
+    <div className={cardClasses}>
+      <div className={classes['offer-card__background']} style={{ backgroundImage }}></div>
       <div className={classes['offer-card__content']}>
         <h3 className={classes['offer-card__heading']}>{title}</h3>
         <p className={classes['offer-card__text']}>{text}</p>

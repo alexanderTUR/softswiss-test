@@ -31,6 +31,7 @@
     &:active {
       color: rgba($color-secondary, 0.6);
     }
+
     &::after {
       content: 'Read more';
     }

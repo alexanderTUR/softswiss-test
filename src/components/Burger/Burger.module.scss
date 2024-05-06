@@ -7,7 +7,6 @@
   transition-property: opacity, filter;
   transition-duration: 0.2s;
   transition-timing-function: linear;
-  transition-timing-function: linear;
   appearance: none;
   font: inherit;
   color: inherit;
@@ -16,7 +15,6 @@
   border: 0;
   margin: 0;
   overflow: visible;
-
   &:hover,
   &:active {
     @if $hamburger-hover-use-filter == true {

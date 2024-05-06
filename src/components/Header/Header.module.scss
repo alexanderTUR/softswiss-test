@@ -97,7 +97,6 @@
     background-size: 300% 100%;
     background-position: top left;
     @include transition(background-position);
-
     &:hover,
     &:active {
       background-position: top left 100%;

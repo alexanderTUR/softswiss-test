@@ -13,6 +13,12 @@ $bg-image-2x: '../../assets/bg-space-hero@2x.webp';
   overflow: hidden;
   @include responsive-margins();
 
+  &--hover {
+    .hero-block__image-container {
+      transform: scale(1.1);
+    }
+  }
+
   &__container {
     padding: 4.4rem 1.5rem;
 
@@ -35,6 +41,7 @@ $bg-image-2x: '../../assets/bg-space-hero@2x.webp';
     width: 100%;
     max-width: 30rem;
     margin: -15rem auto 0;
+    @include transition(transform, 0.5s);
 
     @include respond-to(tablet) {
       margin-top: 0;

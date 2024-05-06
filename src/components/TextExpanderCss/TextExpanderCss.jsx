@@ -1,4 +1,3 @@
-import React from 'react';
 import classes from './TextExpanderCss.module.scss';
 
 export const TextExpanderCss = ({ children }) => {

@@ -37,6 +37,7 @@
     margin: 0;
     font-size: 1.8rem;
     line-height: 1.55;
+    @include font-w-bold;
     color: $color-secondary;
   }
 }
