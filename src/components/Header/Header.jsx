@@ -8,13 +8,18 @@ import CartIconHover from '../../assets/cart-icon--hover.svg';
 export const Header = () => {
   const [isMenuShown, setIsMenuShown] = useState(false);
   const navRef = useRef(null);
+  const burgerRef = useRef(null); // Добавленный ref для бургера
 
   const toggleMenu = useCallback(() => {
     setIsMenuShown((prev) => !prev);
   }, []);
 
   const handleOutsideClick = useCallback((event) => {
-    if (navRef.current && !navRef.current.contains(event.target)) {
+    if (
+      navRef.current &&
+      !navRef.current.contains(event.target) &&
+      !burgerRef.current.contains(event.target) // Проверяем, что клик вне бургера
+    ) {
       setIsMenuShown(false);
     }
   }, []);
@@ -49,7 +54,7 @@ export const Header = () => {
         <a className={classes['app-header__logo-link']} href='#'>
           <img className={classes['app-header__logo']} src={Logo} alt='Company Logo' />
         </a>
-        <div className={classes['app-header__burger']}>
+        <div className={classes['app-header__burger']} ref={burgerRef}>
           <Burger toggle={toggleMenu} isActive={isMenuShown} />
         </div>
         <nav

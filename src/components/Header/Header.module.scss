@@ -38,7 +38,7 @@
     right: 0;
     left: 0;
     opacity: 0;
-    padding: 30px;
+    padding: 3rem;
     background-color: rgba($color-bg, 0.9);
     @include transition(opacity, 0.3s);
     pointer-events: none;
@@ -82,7 +82,7 @@
   }
 
   &__nav-link {
-    font-size: 18px;
+    font-size: 1.8rem;
     text-decoration: none;
     color: $color-white;
     background-image: linear-gradient(
