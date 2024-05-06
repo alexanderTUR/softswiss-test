@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/softswiss-test/static/css/main.c7fcffae.css",
+    "main.js": "/softswiss-test/static/js/main.ce51393b.js",
+    "static/media/bg-space-hero@2x.webp": "/softswiss-test/static/media/bg-space-hero@2x.a66999fad49dfa64fe2d.webp",
+    "static/media/bg-space-hero.webp": "/softswiss-test/static/media/bg-space-hero.61092d25680cc2db504d.webp",
+    "static/media/bg-space-offer-04@2x.webp": "/softswiss-test/static/media/bg-space-offer-04@2x.7fc7a070550a1a0a6b02.webp",
+    "static/media/bg-space-offer-03@2x.webp": "/softswiss-test/static/media/bg-space-offer-03@2x.3675b3a55126cd97c746.webp",
+    "static/media/bg-space-offer-01@2x.webp": "/softswiss-test/static/media/bg-space-offer-01@2x.5b9e616493bdff72c6b5.webp",
+    "static/media/earth@2x.webp": "/softswiss-test/static/media/earth@2x.85313abcecbcd0185b3a.webp",
+    "static/media/bg-space-offer-02@2x.webp": "/softswiss-test/static/media/bg-space-offer-02@2x.6798b33afdaf0620ddb7.webp",
+    "static/media/bg-space-offer-04.webp": "/softswiss-test/static/media/bg-space-offer-04.1d39ca9552c59e6e22ca.webp",
+    "static/media/bg-space-offer-03.webp": "/softswiss-test/static/media/bg-space-offer-03.e534e638668195b28c44.webp",
+    "static/media/bg-space-offer-01.webp": "/softswiss-test/static/media/bg-space-offer-01.6955a9f10b2311758617.webp",
+    "static/media/bg-space-offer-02.webp": "/softswiss-test/static/media/bg-space-offer-02.a2cf59a78a338f63fe90.webp",
+    "static/media/earth.webp": "/softswiss-test/static/media/earth.f81a45f98a69508783af.webp",
+    "static/media/rocket-icon@2x.webp": "/softswiss-test/static/media/rocket-icon@2x.2585e2b238f9972c09c8.webp",
+    "static/media/logo.svg": "/softswiss-test/static/media/logo.98276ae231d0557643ee61308bd80257.svg",
+    "index.html": "/softswiss-test/index.html",
+    "static/media/rocket-icon.webp": "/softswiss-test/static/media/rocket-icon.5f6760e0df6305f9a1a0.webp",
+    "static/media/cart-icon--hover.svg": "/softswiss-test/static/media/cart-icon--hover.2028295c1df240f904af78d62438f62b.svg",
+    "static/media/cart-icon.svg": "/softswiss-test/static/media/cart-icon.eb409152810fdc83f1efcdb96cc654d2.svg",
+    "main.c7fcffae.css.map": "/softswiss-test/static/css/main.c7fcffae.css.map",
+    "main.ce51393b.js.map": "/softswiss-test/static/js/main.ce51393b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c7fcffae.css",
+    "static/js/main.ce51393b.js"
+  ]
+}
