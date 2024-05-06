@@ -11,3 +11,17 @@ $breakpoints: (
   tablet: 768px,
   desktop: 1024px,
 );
+
+$hamburger-padding-x: 0px !default;
+$hamburger-padding-y: 3px !default;
+$hamburger-layer-width: 24px !default;
+$hamburger-layer-height: 2px !default;
+$hamburger-layer-spacing: 6px !default;
+$hamburger-layer-color: $color-white !default;
+$hamburger-layer-border-radius: 2px !default;
+$hamburger-hover-opacity: 1 !default;
+$hamburger-active-layer-color: $color-white !default;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+$hamburger-hover-use-filter: true !default;
+$hamburger-hover-filter: opacity(70%) !default;
+$hamburger-active-hover-filter: $hamburger-hover-filter !default;

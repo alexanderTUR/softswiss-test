@@ -1,9 +1,145 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .app-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 4.8rem;
   background-color: $color-black;
+
+  &__container {
+    position: relative;
+    display: flex;
+    padding: 1.2rem 2rem;
+    @include content-limiter;
+
+    @include respond-to(tablet) {
+      padding: 2.8rem 3rem;
+    }
+
+    @include respond-to(desktop) {
+      padding-top: 2.4rem;
+      padding-bottom: 2.4rem;
+    }
+  }
+
+  &__logo-link {
+    display: flex;
+    width: 7rem;
+  }
+
+  &__logo {
+    @include responsive-image;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    padding: 30px;
+    background-color: rgba($color-bg, 0.9);
+    @include transition(opacity, 0.3s);
+    pointer-events: none;
+
+    @include respond-to(tablet) {
+      display: flex;
+      position: static;
+      background-color: transparent;
+      padding: 0;
+      opacity: 1;
+      margin-left: auto;
+      pointer-events: all;
+    }
+
+    &--is-shown {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include respond-to(tablet) {
+      flex-direction: row;
+      gap: 6rem;
+      margin-right: 2rem;
+    }
+  }
+
+  &__nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__nav-link {
+    font-size: 18px;
+    text-decoration: none;
+    color: $color-white;
+    background-image: linear-gradient(
+      to right,
+      $color-white,
+      $color-white 33.33333%,
+      $color-secondary 66.66666%,
+      $color-primary
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 100%;
+    background-position: top left;
+    @include transition(background-position);
+
+    &:hover,
+    &:active {
+      background-position: top left 100%;
+
+      .app-header__nav-icon {
+        opacity: 0;
+      }
+
+      .app-header__nav-icon--on-hover {
+        opacity: 1;
+      }
+    }
+
+    &--with-icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.4rem;
+      height: 2rem;
+    }
+  }
+
+  &__nav-icon {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 1;
+    @include transition(opacity);
+
+    &--on-hover {
+      opacity: 0;
+    }
+  }
+
+  &__burger {
+    margin-left: auto;
+
+    @include respond-to(tablet) {
+      display: none;
+    }
+  }
 }

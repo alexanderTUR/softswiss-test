@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-weight: 700;
+  @include font-w-main;
   font-size: 1.6rem;
   font-family: $font-main;
   border: none;
